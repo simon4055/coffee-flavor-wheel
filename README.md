@@ -35,43 +35,6 @@
 - 数据内嵌，无需后端
 
 
-
-## 部署到 GitHub Pages
-
-### 1. 创建 GitHub 仓库
-
-1. 登录 GitHub，点击右上角 **+** → **New repository**
-2. 仓库名填写 `coffee-flavor-wheel`
-3. 选择 **Public**（公开）
-4. 点击 **Create repository**
-
-### 2. 推送代码
-
-```bash
-# 初始化 Git 仓库
-git init
-
-# 添加文件
-git add docs/ README.md
-
-# 提交
-git commit -m "Initial commit: Coffee Flavor Wheel"
-
-# 添加远程仓库（将 yourusername 替换为你的 GitHub 用户名）
-git remote add origin https://github.com/yourusername/coffee-flavor-wheel.git
-
-# 推送
-git push -u origin main
-```
-
-### 3. 开启 GitHub Pages
-
-1. 进入仓库页面 → **Settings** → **Pages**
-2. **Source** 选择 **Deploy from a branch**
-3. **Branch** 选择 **main** → **/docs** 文件夹
-4. 点击 **Save**
-5. 等待 1-2 分钟，访问 `https://yourusername.github.io/coffee-flavor-wheel`
-
 ## 数据来源
 
 - 原始数据：`咖啡风味手册.xlsx`
@@ -80,11 +43,6 @@ git push -u origin main
 
 ## 生成脚本
 
-```bash
-# 从 Excel 导出数据并生成网页
-python export_data.py      # 导出 JSON 数据
-python gen_web.py          # 生成 docs/index.html
-```
 
 ## License
 
