@@ -1,0 +1,91 @@
+# 咖啡风味轮 · Coffee Flavor Wheel
+
+一款精美的咖啡风味交互探索工具，涵盖 **209 个风味词条**，分为 **9 大风味分类**。
+
+🔗 **在线访问**: https://simon4055.github.io/coffee-flavor-wheel
+
+![预览图](preview.png)
+
+## 功能特点
+
+- 🎯 **交互式风味轮**: Canvas 绘制的高清风味轮，点击扇形查看详情
+- 📱 **响应式设计**: 桌面端双栏布局，移动端单栏适配
+- 🔍 **全文搜索**: 支持风味词、英文、描述内容搜索
+- 📚 **分类浏览**: 9 大风味分类快速筛选
+- ☕ **完整风味信息**: 风味体验、风味定义、风味成因
+
+## 风味分类
+
+| 分类 | 词条数 | 颜色 |
+|------|--------|------|
+| 果香 FRUITY | 52 | 陶土橙 |
+| 花香 FLORAL | 12 | 玫瑰砖红 |
+| 酸味/发酵味 SOUR/FERMENTED | 30 | 琥珀金 |
+| 甜味 SWEET | 22 | 烟紫 |
+| 坚果/可可 NUTTY/COCOA | 19 | 深木棕 |
+| 绿色/植物 GREEN/VEGETATIVE | 18 | 苔藓深绿 |
+| 香料味 SPICES | 13 | 香料铜 |
+| 烘烤味 ROASTED | 19 | 深焦棕 |
+| 其他 OTHER | 24 | 石板灰 |
+
+## 技术栈
+
+- HTML5 + CSS3 (原生，无框架)
+- Canvas API 绘制风味轮
+- 数据内嵌，无需后端
+
+
+
+## 部署到 GitHub Pages
+
+### 1. 创建 GitHub 仓库
+
+1. 登录 GitHub，点击右上角 **+** → **New repository**
+2. 仓库名填写 `coffee-flavor-wheel`
+3. 选择 **Public**（公开）
+4. 点击 **Create repository**
+
+### 2. 推送代码
+
+```bash
+# 初始化 Git 仓库
+git init
+
+# 添加文件
+git add docs/ README.md
+
+# 提交
+git commit -m "Initial commit: Coffee Flavor Wheel"
+
+# 添加远程仓库（将 yourusername 替换为你的 GitHub 用户名）
+git remote add origin https://github.com/yourusername/coffee-flavor-wheel.git
+
+# 推送
+git push -u origin main
+```
+
+### 3. 开启 GitHub Pages
+
+1. 进入仓库页面 → **Settings** → **Pages**
+2. **Source** 选择 **Deploy from a branch**
+3. **Branch** 选择 **main** → **/docs** 文件夹
+4. 点击 **Save**
+5. 等待 1-2 分钟，访问 `https://yourusername.github.io/coffee-flavor-wheel`
+
+## 数据来源
+
+- 原始数据：`咖啡风味手册.xlsx`
+- 共 209 条风味词条
+- 基于 SCA（精品咖啡协会）风味轮框架
+
+## 生成脚本
+
+```bash
+# 从 Excel 导出数据并生成网页
+python export_data.py      # 导出 JSON 数据
+python gen_web.py          # 生成 docs/index.html
+```
+
+## License
+
+MIT License
